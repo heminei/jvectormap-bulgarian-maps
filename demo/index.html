@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jvectormap demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="../libs/bootstrap-4.0.0-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../libs/jquery-jvectormap-2.0.3/jquery-jvectormap-2.0.3.css" rel="stylesheet" type="text/css"/>
+
+        <script src="../libs/jquery-3.3.1.js" type="text/javascript"></script>
+        <script src="../libs/bootstrap-4.0.0-dist/js/bootstrap.js" type="text/javascript"></script>
+        <script src="../libs/jquery-jvectormap-2.0.3/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
+        <script src="../src/jquery-jvectormap-bg-regions.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <h2>Bulgarian Regions:</h2>
+            <div id="bg-map" style="height: 500px;"></div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                var gdpData = {
+                    "BG342": 100,
+                    "BG321": 200,
+                };
+                $('#bg-map').vectorMap({
+                    map: 'bg_regions',
+                    series: {
+                        regions: [
+                            {
+                                values: gdpData,
+                                scale: ['#C8EEFF', '#0071A4'],
+                                normalizeFunction: 'polynomial'
+                            }
+                        ]
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
