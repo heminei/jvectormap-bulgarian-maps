@@ -2,6 +2,11 @@
 Jvectormap bulgarian regions map
 
 
+Demo:
+-----------
+
+http://heminei.github.io/jvectormap-bulgarian-maps/demo/
+
 How to use:
 -----------
 
